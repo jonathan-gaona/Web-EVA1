@@ -1,58 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de ejemplo</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+    <title>MusicMania - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    
 </head>
 <body>
-    
-    <!-- barra de navegacion -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Inicio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="catalogo_albunes.html">Catalogo</a>
-        </li>
+    <!-- Header y Menú de navegación (Requisito 1 y 9) -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-danger fs-3" href="index.html">MusicMania</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="blog_reseñas.html">Blog/Reseñas</a>
-        </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo_albumes.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog_reseñas.html">Blog/Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrito_compras.html">Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="carrito_compras.html">Carrito</a>
-        </li>
+    <!-- Contenido Principal (Requisito 5) -->
+    <main>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-        </li>
+        <!-- Sección Banner Principal -->
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">BIENVENIDOS A MUSICMANIA</h1>
+                <h2 class="h4 text-muted mb-4">TU TIENDA DE MÚSICA ONLINE</h2>
+                <p class="lead">Lanzamientos, novedades y ofertas exclusivas para tu colección.</p>
+                
+            </div>
+        </section>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="sobre_nosotros.html">Sobreno sotros</a>
-        </li>
-        
-         
-          
-        
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        <!-- Sección de Destacados  -->
+        <section class="py-5">
+            <div class="container">
+                <h3 class="text-center mb-4 fs-2">Lo Más Buscado</h3>
+                
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Tarjeta 1: Catálogo -->
+                    <article class="col-md-5">
+                        <div class="card tarjeta shadow-sm">
+                            <img src="img/albumes_RapChileno.jpg" class="card-img-top img-efecto" alt="Colección de Vinilos">
+                            <div class="card-body text-center">
+                                <h4 class="card-title fw-bold">CATÁLOGO DE ÁLBUMES</h4>
+                                <p class="card-text">Explora nuestra colección completa de vinilos, CDs y más.</p>
+                                <a href="catalogo_albumes.html" class="btn btn-outline-danger">Ver Catálogo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Reseñas -->
+                    <article class="col-md-5">
+                        <div class="card tarjeta shadow-sm">
+                            <img src="img/blog.jpg" class="card-img-top img-efecto" alt="Reseñas de Música">
+                            <div class="card-body text-center">
+                                <h4 class="card-title fw-bold">BLOG Y RESEÑAS</h4>
+                                <p class="card-text">Lee opiniones, análisis de discos clásicos y novedades.</p>
+                                <a href="blog_reseñas.html" class="btn btn-outline-danger">Leer Blog</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Sección Informativa sobre Nosotros -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            
+            <div class="col-md-3 text-center">
+                <!-- AQUÍ VA TU IMAGEN DENTRO DEL BODY -->
+                <img src="img/logo.jpg" class="img-fluid rounded img-logo shadow-sm mb-3 mb-md-0" alt="Logo MusicMania">
+            </div>
+
+            <div class="col-md-7 text-center text-md-start">
+                <h3>¿Quiénes Somos?</h3>
+                <p>Somos un proyecto apasionado por la música física. Conoce más sobre nuestra historia y equipo.</p>
+                <a href="sobre_nosotros.html" class="btn btn-dark">Conócenos</a>
+            </div>
+
+        </div>
     </div>
-  </div>
-</nav>
+</section>
 
+    </main>
 
+    <!-- Footer (Requisito 5) -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 MusicMania - Todos los derechos reservados.</p>
+            <p class="small text-muted mb-0">Página hecha por estudiantes.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/bootstrap.bundle.min.js"></script>
+    <!-- Archivo JS personalizado (Requisito 6) -->
+    <script src="js/script.js"></script>
 </body>
 </html>
