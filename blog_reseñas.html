@@ -249,71 +249,116 @@
         </div>
     </section>
 
-    <!-- 3. PANALES LATERALES COLAPSABLES (OFFCANVAS DESDE LA DERECHA) -->
+ <!-- 3. PANALES LATERALES COLAPSABLES CON FORMULARIO (OFFCANVAS DESDE LA DERECHA) -->
     
-    <!-- Offcanvas para Álbum 1 -->
+    <!-- Offcanvas Formulario Álbum 1 -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasResenas1" aria-labelledby="offcanvasResenasLabel1">
         <div class="offcanvas-header bg-danger text-white">
-            <h5 class="offcanvas-title" id="offcanvasResenasLabel1">Reseñas: Ley 20 Mil</h5>
+            <h5 class="offcanvas-title" id="offcanvasResenasLabel1">Escribir Reseña: Ley 20 Mil</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <div class="text-warning mb-1">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                    <h6 class="card-subtitle mb-2 text-muted">Por Andrea G.</h6>
-                    <p class="card-text fs-7">"La producción lírica de Ley 20 Mil es de otro nivel. Las letras reflejan la realidad urbana."</p>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu nombre / Apodo</label>
+                    <input type="text" class="form-control" placeholder="Ej. Juan Pérez" required>
                 </div>
-            </div>
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <div class="text-warning mb-1">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                    </div>
-                    <h6 class="card-subtitle mb-2 text-muted">Por Matías P.</h6>
-                    <p class="card-text fs-7">"Muy buen ritmo en los bajos, aunque la mezcla vocal se escucha un poco baja en la pista 3."</p>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold d-block">Calificación (1 a 5 estrellas)</label>
+                    <select class="form-select text-warning fw-bold" required>
+                        <option value="" disabled selected class="text-dark">Selecciona tu puntuación...</option>
+                        <option value="5">★★★★★ (5/5 - Excelente)</option>
+                        <option value="4">★★★★☆ (4/5 - Muy bueno)</option>
+                        <option value="3">★★★☆☆ (3/5 - Bueno)</option>
+                        <option value="2">★★☆☆☆ (2/5 - Regular)</option>
+                        <option value="1">★☆☆☆☆ (1/5 - Malo)</option>
+                    </select>
                 </div>
-            </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu reseña u opinión</label>
+                    <textarea class="form-control" rows="4" placeholder="Escribe un breve resumen de lo que opinas sobre este álbum..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-danger w-100 fw-bold">
+                    <i class="bi bi-send-fill me-1"></i> Publicar Reseña
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- Offcanvas para Álbum 2 -->
+    <!-- Offcanvas Formulario Álbum 2 -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasResenas2" aria-labelledby="offcanvasResenasLabel2">
         <div class="offcanvas-header bg-danger text-white">
-            <h5 class="offcanvas-title" id="offcanvasResenasLabel2">Reseñas: Techy Muv</h5>
+            <h5 class="offcanvas-title" id="offcanvasResenasLabel2">Escribir Reseña: Techy Muv</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <div class="text-warning mb-1">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                    <h6 class="card-subtitle mb-2 text-muted">Por Felipe S.</h6>
-                    <p class="card-text fs-7">"Excelentes bajos y una atmósfera envolvente. Ideal para escuchar con audífonos."</p>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu nombre / Apodo</label>
+                    <input type="text" class="form-control" placeholder="Ej. Juan Pérez" required>
                 </div>
-            </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold d-block">Calificación (1 a 5 estrellas)</label>
+                    <select class="form-select text-warning fw-bold" required>
+                        <option value="" disabled selected class="text-dark">Selecciona tu puntuación...</option>
+                        <option value="5">★★★★★ (5/5 - Excelente)</option>
+                        <option value="4">★★★★☆ (4/5 - Muy bueno)</option>
+                        <option value="3">★★★☆☆ (3/5 - Bueno)</option>
+                        <option value="2">★★☆☆☆ (2/5 - Regular)</option>
+                        <option value="1">★☆☆☆☆ (1/5 - Malo)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu reseña u opinión</label>
+                    <textarea class="form-control" rows="4" placeholder="Escribe un breve resumen de lo que opinas sobre este álbum..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-danger w-100 fw-bold">
+                    <i class="bi bi-send-fill me-1"></i> Publicar Reseña
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- Offcanvas para Álbum 3 -->
+    <!-- Offcanvas Formulario Álbum 3 -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasResenas3" aria-labelledby="offcanvasResenasLabel3">
         <div class="offcanvas-header bg-danger text-white">
-            <h5 class="offcanvas-title" id="offcanvasResenasLabel3">Reseñas: R de Revolución</h5>
+            <h5 class="offcanvas-title" id="offcanvasResenasLabel3">Escribir Reseña: R de Revolución</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <div class="text-warning mb-1">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                    <h6 class="card-subtitle mb-2 text-muted">Por Carlos M.</h6>
-                    <p class="card-text fs-7">"¡Simplemente impresionante! Las guitarras y la energía del disco te atrapan desde el primer segundo."</p>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu nombre / Apodo</label>
+                    <input type="text" class="form-control" placeholder="Ej. Juan Pérez" required>
                 </div>
-            </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold d-block">Calificación (1 a 5 estrellas)</label>
+                    <select class="form-select text-warning fw-bold" required>
+                        <option value="" disabled selected class="text-dark">Selecciona tu puntuación...</option>
+                        <option value="5">★★★★★ (5/5 - Excelente)</option>
+                        <option value="4">★★★★☆ (4/5 - Muy bueno)</option>
+                        <option value="3">★★★☆☆ (3/5 - Bueno)</option>
+                        <option value="2">★★☆☆☆ (2/5 - Regular)</option>
+                        <option value="1">★☆☆☆☆ (1/5 - Malo)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tu reseña u opinión</label>
+                    <textarea class="form-control" rows="4" placeholder="Escribe un breve resumen de lo que opinas sobre este álbum..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-danger w-100 fw-bold">
+                    <i class="bi bi-send-fill me-1"></i> Publicar Reseña
+                </button>
+            </form>
         </div>
     </div>
 
