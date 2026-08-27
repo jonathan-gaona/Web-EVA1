@@ -4,50 +4,56 @@ ini_set('display_errors', 0);
 
 header('Content-Type: application/json; charset=utf-8');
 
-require_once 'conexion.php';
+// Configuración de la base de datos
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "musicmania";
 
-/** @var mysqli $conexion */
-// 2. Definir encabezado JSON
-header('Content-Type: application/json; charset=utf-8');
+$conexion = @new mysqli($host, $user, $password, $dbname);
 
-// 3. Incluir archivo de conexión
-include 'conexion.php';
+if ($conexion->connect_error) {
+    echo json_encode(['status' => 'error', 'message' => 'Error de conexión con la BD']);
+    exit();
+}
 
-// 4. Leer los datos enviados por JS (fetch)
-$data = json_decode(file_get_contents("php://input"), true);
+$conexion->set_charset("utf8mb4");
 
-// 5. Validar que los campos obligatorios vengan en la petición
-if (isset($data['usuario']) && isset($data['comentario']) && isset($data['calificacion'])) {
+// Leer la petición JSON
+$input = file_get_contents("php://input");
+$data = json_decode($input, true);
 
-    // Usar la variable $conexion definida en conexion.php
-    if (!$conexion || $conexion->connect_error) {
-        echo json_encode(["status" => "error", "message" => "Error de conexión a la BD"]);
-        exit;
-    }
+if ($data) {
+    // 1. Extraer datos y asegurarnos de limpiar los tipos
+    $producto_id  = isset($data['producto_id']) ? intval($data['producto_id']) : 0;
+    $calificacion = isset($data['calificacion']) ? intval($data['calificacion']) : 0;
+    $usuario      = (isset($data['usuario']) && trim($data['usuario']) !== '') ? trim($data['usuario']) : 'Anónimo';
 
-    // Asegurar que la tabla 'resenas' existe antes de insertar
-    $sqlTabla = "CREATE TABLE IF NOT EXISTS resenas (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        usuario VARCHAR(100) NOT NULL,
-        comentario TEXT NOT NULL,
-        calificacion INT NOT NULL,
-        fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )";
-    $conexion->query($sqlTabla);
+    // 2. Gestionar el comentario opcional (cadena limpia sin forzar variable tipo NULL en bind_param)
+    $comentario   = isset($data['comentario']) ? trim($data['comentario']) : '';
 
-    // Limpiar variables usando $conexion
-    $usuario = $conexion->real_escape_string($data['usuario']);
-    $comentario = $conexion->real_escape_string($data['comentario']);
-    $calificacion = (int)$data['calificacion'];
+    // 3. Validar que la calificación esté en el rango de 1 a 5 y el producto sea válido
+    if ($producto_id > 0 && $calificacion >= 1 && $calificacion <= 5) {
 
-    // Insertar en la base de datos
-    $sql = "INSERT INTO resenas (usuario, comentario, calificacion) VALUES ('$usuario', '$comentario', $calificacion)";
+        $stmt = $conexion->prepare("INSERT INTO resenas (producto_id, usuario, comentario, calificacion) VALUES (?, ?, ?, ?)");
 
-    if ($conexion->query($sql) === TRUE) {
-        echo json_encode(["status" => "success", "message" => "Reseña guardada exitosamente"]);
+        if ($stmt) {
+            $stmt->bind_param("issi", $producto_id, $usuario, $comentario, $calificacion);
+
+            if ($stmt->execute()) {
+                echo json_encode(['status' => 'success', 'message' => 'Reseña guardada exitosamente']);
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'Error al ejecutar en BD: ' . $stmt->error]);
+            }
+            $stmt->close();
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Error en la sentencia SQL: ' . $conexion->error]);
+        }
     } else {
-        echo json_encode(["status" => "error", "message" => $conexion->error]);
+        echo json_encode(['status' => 'error', 'message' => 'ID de álbum no válido o calificación ausente']);
     }
 } else {
-    echo json_encode(["status" => "error", "message" => "Datos incompletos"]);
+    echo json_encode(['status' => 'error', 'message' => 'No se recibieron datos válidos']);
 }
+
+$conexion->close();

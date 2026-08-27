@@ -1,11 +1,12 @@
-
+/* =======================================================
+   ESTILOS GENERALES
+======================================================= */
 .img-logo {
     width: 150px;
     height: auto;
     border-radius: 50% !important;
 }
 
-/* Dimensiones estables para las miniaturas y controles del carrito */
 .cart-product-image {
     width: 112px;
     height: 84px;
@@ -27,7 +28,10 @@
     border-radius: 50%;
     background: #e9ecef;
     font-weight: bold;
-    line-height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .quantity-control input {
@@ -35,6 +39,18 @@
     height: 28px;
     text-align: center;
     border: 1px solid #adb5bd;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
+.quantity-control input::-webkit-outer-spin-button,
+.quantity-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 @media (max-width: 575.98px) {
@@ -50,4 +66,33 @@
     .quantity-control {
         flex-shrink: 0;
     }
+}
+
+/* =======================================================
+   SISTEMA DE CALIFICACIÓN DE ESTRELLAS
+======================================================= */
+/* Contenedor principal */
+.google-rating-container .google-stars {
+    user-select: none;
+}
+
+/* Estado normal de las estrellas (QUITAR !important del color base) */
+.google-rating-container .star-btn {
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #ccc; /* Sin !important para permitir sobreescritura */
+    transition: transform 0.15s ease, color 0.15s ease;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+/* Ampliación al pasar el ratón */
+.google-rating-container .star-btn:hover {
+    transform: scale(1.25);
+}
+
+/* Estado activo (amarillo) - Forzado con especificidad alta */
+.google-rating-container .google-stars .star-btn.active {
+    color: #fbc02d !important; /* Amarillo Google Maps */
 }
