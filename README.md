@@ -37,3 +37,5 @@ Ubica los archivos del proyecto dentro del directorio de tu servidor local:
    $clave = "";
    $bd = "MusicMania";
    $puerto = 3307;
+4. Visualizacion de base de datos "MusicMania" a travez de phpMyAdmin
+   `http://localhost/phpmyadmin/index.php`
