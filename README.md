@@ -27,8 +27,10 @@ Ubica los archivos del proyecto dentro del directorio de tu servidor local:
 `C:\xampp\htdocs\Musicmania`
 
 ### 2. Configuración de XAMPP / MySQL
-1. Inicia los servicios de **Apache** y **MySQL** desde el Control Panel de XAMPP.
-2. Si tu MySQL utiliza el puerto personalizado `3307`, asegúrate de que el archivo `php/conexion.php` mantenga la configuración correspondiente:
+1. Inicia los servicios de **Apache** y **MySQL** desde el Control Panel de XAMPP.Ingresar a panel principal, mysql a la derecha. config
+   e ingresar a my.ini (se abre a travez de bloc de notas)y cambiar los puertos a 3307
+   
+3. Si tu MySQL utiliza el puerto personalizado `3307`, asegúrate de que el archivo `php/conexion.php` mantenga la configuración correspondiente:
    ```php
    $host = "127.0.0.1";
    $usuario = "root";
