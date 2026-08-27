@@ -1,17 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras - MusicMania</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-
 <body class="bg-white">
-    <!-- Encabezado compartido con las acciones ubicadas en la esquina superior derecha -->
+    <!-- Encabezado -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div class="container-fluid">
@@ -24,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="catalogo_albumes.html">Catálogo</a>
@@ -39,86 +37,48 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
-                    <!-- Enlaces de sesión, registro y carrito visibles en todas las páginas -->
                     <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3 ms-lg-auto">
                         <a class="nav-link" href="iniciar_sesion.html">Iniciar sesión</a>
                         <a class="nav-link" href="registro.html">Registrarse</a>
-                        <a class="btn btn-dark btn-sm" href="carrito_compras.html" aria-current="page">Carrito (3)</a>
+                        <a class="btn btn-dark btn-sm" href="carrito_compras.html" id="btn-carrito" aria-current="page">Carrito (0)</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Carrito diseñado a partir del mockup: productos, cantidades, cupón y resumen -->
+    <!-- Carrito -->
     <main class="container py-5">
         <h1 class="mb-5">Mi carrito de compras</h1>
         <div class="row g-4">
-            <section class="col-lg-8" aria-label="Productos agregados al carrito">
-                <!-- Producto 1 del catálogo -->
-                <article class="d-flex align-items-center gap-3 border-bottom pb-3 mb-3">
-                    <img src="img/Ley20mil.jpg" class="cart-product-image" alt="Portada Naturaleza Muerta">
-                    <div class="flex-grow-1">
-                        <h2 class="h5 mb-1">Naturaleza Muerta</h2>
-                        <p class="small text-muted mb-0">Ley 20 mil</p>
-                    </div>
-                    <strong>$ 8.000</strong>
-                    <div class="quantity-control" aria-label="Cantidad de Naturaleza Muerta">
-                        <button type="button" class="quantity-button" aria-label="Disminuir cantidad">-</button>
-                        <input type="number" value="1" min="1" aria-label="Cantidad">
-                        <button type="button" class="quantity-button" aria-label="Aumentar cantidad">+</button>
-                    </div>
-                </article>
-
-                <!-- Producto 2 del catálogo -->
-                <article class="d-flex align-items-center gap-3 border-bottom pb-3 mb-3">
-                    <img src="img/RdeRevolucion.jpg" class="cart-product-image" alt="Portada Rap con R de Revolucion">
-                    <div class="flex-grow-1">
-                        <h2 class="h5 mb-1">Rap con R de Revolucion</h2>
-                        <p class="small text-muted mb-0">Portavoz</p>
-                    </div>
-                    <strong>$ 6.000</strong>
-                    <div class="quantity-control" aria-label="Cantidad de Rap con R de Revolucion">
-                        <button type="button" class="quantity-button" aria-label="Disminuir cantidad">-</button>
-                        <input type="number" value="1" min="1" aria-label="Cantidad">
-                        <button type="button" class="quantity-button" aria-label="Aumentar cantidad">+</button>
-                    </div>
-                </article>
-
-                <!-- Producto 3 del catálogo -->
-                <article class="d-flex align-items-center gap-3 border-bottom pb-3 mb-3">
-                    <img src="img/Elcirculo.jpg" class="cart-product-image" alt="Portada El Circulo">
-                    <div class="flex-grow-1">
-                        <h2 class="h5 mb-1">El Circulo</h2>
-                        <p class="small text-muted mb-0">Kase.O</p>
-                    </div>
-                    <strong>$ 10.000</strong>
-                    <div class="quantity-control" aria-label="Cantidad de El Circulo">
-                        <button type="button" class="quantity-button" aria-label="Disminuir cantidad">-</button>
-                        <input type="number" value="1" min="1" aria-label="Cantidad">
-                        <button type="button" class="quantity-button" aria-label="Aumentar cantidad">+</button>
-                    </div>
-                </article>
+            <!-- Los productos agregados se construirán dinámicamente aquí -->
+            <section class="col-lg-8" id="lista-carrito" aria-label="Productos agregados al carrito">
+                <p class="text-muted">Cargando productos del carrito...</p>
             </section>
 
-            <!-- Resumen del pedido, basado en el panel derecho del mockup -->
+            <!-- Resumen del pedido -->
             <aside class="col-lg-4 cart-summary">
                 <div class="border-top border-dark pt-3">
                     <div class="d-flex justify-content-between align-items-center mb-5">
                         <h2 class="h4 mb-0">TOTAL:</h2>
-                        <strong class="fs-5">$ 24.000</strong>
+                        <strong class="fs-5" id="total-carrito">$ 0</strong>
                     </div>
                     <label for="cupon" class="form-label small text-muted">Ingrese el cupón de descuento</label>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="cupon" aria-label="Cupón de descuento">
                         <button class="btn btn-outline-secondary" type="button">Aplicar</button>
                     </div>
-                    <button type="button" class="btn btn-success btn-lg w-100 fw-bold">PAGAR</button>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-success btn-lg fw-bold">PAGAR</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    </div>
                 </div>
             </aside>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/carrito_vista.js"></script>
 </body>
 </html>
