@@ -96,3 +96,73 @@
 .google-rating-container .google-stars .star-btn.active {
     color: #fbc02d !important; /* Amarillo Google Maps */
 }
+/* =======================================================
+   Estilo del Blog
+======================================================= */
+/* Color gris oscuro exacto para la sección entera */
+.bg-blog-gris {
+  background-color: #1a1a1e !important;
+}
+
+/* Imagen destacada grande */
+.main-blog-img {
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.main-blog-img:hover {
+  transform: scale(1.01);
+}
+
+/* Miniaturas inferiores con comportamiento interactivo */
+.blog-thumb {
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  background-color: #2a2a2e;
+  transition: all 0.3s ease;
+}
+
+.blog-thumb:hover, 
+.blog-thumb.active {
+  opacity: 1;
+  border-color: #dc3545 !important; /* Rojo dinámico coincidente con la paleta de MusicMania */
+  transform: translateY(-2px);
+}
+
+/* Espaciado del tracking de la etiqueta superior */
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+/* Ajuste del listado para que encaje suavemente en el fondo oscuro */
+.blog-item {
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 6px;
+}
+
+.blog-item:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+/* Estilo del botón al estilo alambre/wireframe*/
+.custom-btn-case {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 8px 20px;
+  transition: all 0.2s ease;
+}
+
+.custom-btn-case:hover {
+  background-color: #e2e2e2;
+  color: #000000;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
