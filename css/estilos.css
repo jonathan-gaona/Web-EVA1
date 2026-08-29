@@ -166,3 +166,30 @@
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 0px #000000;
 }
+
+
+
+/* agregandole estilo al inicio */
+
+
+/* Banner Principal Hero con fondo musical */
+.hero-musica {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    color: #ffffff;
+    padding: 100px 20px;
+}
+
+/* Efecto Hover para el botón amarillo */
+.btn-hero {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-hero:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+    color: #000;
+}

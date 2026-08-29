@@ -54,50 +54,68 @@
     <main>
 
         <!-- Banner Principal (Hero) -->
-        <section class="py-5 bg-light text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">BIENVENIDOS A MUSICMANIA</h1>
-                <h2 class="h4 text-muted mb-4">TU TIENDA DE MÚSICA ONLINE</h2>
-                <p class="lead">Lanzamientos, novedades y ofertas exclusivas para tu colección.</p>
-                <button class="btn btn-warning text-white btn-lg fw-bold shadow-sm" onclick="mostrarBienvenida()">
-                    Descubrir Más
-                </button>
-            </div>
-        </section>
+        <!-- Banner Principal (Hero con fondo musical) -->
+<section class="hero-musica text-center mb-5">
+    <div class="container py-4">
+        <h1 class="display-3 fw-bold text-uppercase tracking-wide">Bienvenidos a MusicMania</h1>
+        <h2 class="h3 text-warning mb-4 fw-light">Tu Tienda de Música Online</h2>
+        <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+            Encuentra vinilos exclusivos, CDs de colección y las mejores novedades para apasionados del sonido análogo.
+        </p>
+        <!-- El botón ahora funciona como un hipervínculo directo al catálogo -->
+        <a href="catalogo_albumes.html" class="btn btn-hero btn-lg fw-bold px-4 py-3 shadow">
+            Ver Catálogo Completo
+        </a>
+    </div>
+</section>
 
-        <!-- Tarjetas Destacadas -->
-        <section class="py-5">
-            <div class="container">
-                <h3 class="text-center mb-4 fs-2">Lo Más Buscado</h3>
-                <div class="row g-4 justify-content-center">
-                    
-                    <!-- Tarjeta Catálogo -->
-                    <article class="col-md-5">
-                        <div class="card tarjeta shadow-sm">
-                            <img src="img/albumes_RapChileno.jpg" class="card-img-top img-efecto" alt="Colección de Vinilos">
-                            <div class="card-body text-center">
-                                <h4 class="card-title fw-bold">CATÁLOGO DE ÁLBUMES</h4>
-                                <p class="card-text">Explora nuestra colección completa de vinilos, CDs y más.</p>
-                                <a href="catalogo_albumes.html" class="btn btn-outline-danger">Ver Catálogo</a>
-                            </div>
-                        </div>
-                    </article>
+        <!-- Sección Productos y Accesos Destacados -->
+<section class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-2 fs-2 fw-bold">Explora MusicMania</h3>
+        <p class="text-center text-muted mb-5">Encuentra todo lo que necesitas para elevar tu experiencia musical</p>
 
-                    <!-- Tarjeta Blog -->
-                    <article class="col-md-5">
-                        <div class="card tarjeta shadow-sm">
-                            <img src="img/blog.jpg" class="card-img-top img-efecto" alt="Reseñas de Música">
-                            <div class="card-body text-center">
-                                <h4 class="card-title fw-bold">BLOG Y RESEÑAS</h4>
-                                <p class="card-text">Lee opiniones, análisis de discos clásicos y novedades.</p>
-                                <a href="blog_resenas.html" class="btn btn-outline-danger">Leer Blog</a>
-                            </div>
-                        </div>
-                    </article>
-
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Tarjeta 1: Vinilos -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Vinilos destacados">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Vinilos & LPs Exclusivos</h4>
+                        <p class="card-text text-muted small flex-grow-1">Ediciones limitadas, clásicos del rock, jazz y los últimos lanzamientos en formato análogo.</p>
+                        <a href="catalogo_albumes.html" class="btn btn-danger w-100 mt-3 fw-bold">Ver Álbumes</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </article>
+
+            <!-- Tarjeta 2: Tornamesas/Equipos -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Tornamesas y audio">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Tornamesas & Audio</h4>
+                        <p class="card-text text-muted small flex-grow-1">Equipos de alta fidelidad, agujas de repuesto y amplificadores para tu sistema de sonido.</p>
+                        <a href="equipos.html" class="btn btn-outline-danger w-100 mt-3 fw-bold">Ver Equipos</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3: Blog y Noticias -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Reseñas musicales">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Reseñas & Comunidad</h4>
+                        <p class="card-text text-muted small flex-grow-1">Lee las opiniones de nuestros expertos sobre los álbumes más icónicos de la historia.</p>
+                        <a href="blog_reseñas.html" class="btn btn-outline-dark w-100 mt-3 fw-bold">Leer Blog</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
 
         <!-- Video Embebido (Exigencia del encargo) -->
         <section class="py-5 bg-light text-center">
