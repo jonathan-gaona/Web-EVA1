@@ -34,8 +34,202 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </head>
+<body>
 
+    <!-- ========================================== -->
+    <!-- ENCABEZADO Y BARRA DE NAVEGACIÓN (HEADER)  -->
+    <!-- ========================================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+            <div class="container-fluid">
+                <!-- Logotipo / Nombre del sitio -->
+                <a class="navbar-brand fw-bold text-danger fs-3" href="index.html">MusicMania</a>
+                
+                <!-- Botón Hamburguesa para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de enlaces principales -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo_albumes.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog_resenas.html">Blog/Reseñas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <!-- Accesos directos de sesión y carrito -->
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3 ms-lg-auto">
+                        <a class="nav-link" href="iniciar_sesion.html">Iniciar sesión</a>
+                        <a class="nav-link" href="registro.html">Registrarse</a>
+                        <a class="btn btn-dark btn-sm" href="carrito_compras.html" id="btn-carrito">Carrito (0)</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> 
+    <!-- Banner a pantalla completa-->
+    <div class="container-fluid p-0">
+        <img src="img/fondo_blog.jpg" 
+        class="img-fluid w-100 object-fit-cover" 
+        style="height: 200px;" 
+        alt="Imagen de extremo a extremo">
+    </div>
+    <!-- ========================================== -->
+    <!-- CONTENIDO PRINCIPAL (MAIN) BLOG DE CURIOSIDADES-->
+    <!-- ========================================== -->
+
+        <section class="py-5 bg-dark text-white rounded my-5">
+            <div class="container">
+                
+                <h2 class="text-center fw-bold mb-5 text-uppercase tracking-wider">Blog de Curiosidades 🤓☝️</h2>
+
+                <div class="d-flex flex-column gap-4">
+
+                    <!-- Caso Curioso #1 -->
+                    <div class="bg-blog-gris p-4 rounded shadow-sm">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-uppercase mb-3">La canción más corta</h3>
+                                    <p class="text-secondary mb-3">
+                                        Se llama <strong>"You Suffer"</strong> de la banda Napalm Death. Dura exactamente <strong>1,316 segundos</strong> y consta de un solo acorde ultra rápido.
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-light border-2 custom-btn-case fw-bold text-uppercase mt-2" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#detalleCaso1" 
+                                            aria-expanded="false">
+                                        Ver Caso <i class="bi bi-caret-down-fill ms-1"></i>
+                                    </button>
+                                    <div class="collapse mt-3" id="detalleCaso1">
+                                        <div class="p-3 bg-dark rounded text-secondary small">
+                                            Grabada en 1986, ostenta el récord Guinness a la grabación musical más corta de la historia. Fue compuesta por Justin Broadrick y Nik Bullen.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/cancion_corta.jpg" class="img-fluid rounded w-100 object-fit-cover" style="max-height: 280px;" alt="Canción más corta">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso Curioso #2 -->
+                    <div class="bg-blog-gris p-4 rounded shadow-sm">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-uppercase mb-3">La obra más larga</h3>
+                                    <p class="text-secondary mb-3">
+                                        <strong>"ORGAN²/ASLSP"</strong> de John Cage se está interpretando en una iglesia en Alemania. Comenzó en 2001 y terminará en el año <strong>2640</strong>.
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-light border-2 custom-btn-case fw-bold text-uppercase mt-2" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#detalleCaso2" 
+                                            aria-expanded="false">
+                                        Ver Caso <i class="bi bi-caret-down-fill ms-1"></i>
+                                    </button>
+                                    <div class="collapse mt-3" id="detalleCaso2">
+                                        <div class="p-3 bg-dark rounded text-secondary small">
+                                            La melodía cambia de nota cada un par de años debido a un tempo ultra lento dictado por la indicación del autor: "As SLow as Possible" (Lo más lento posible).
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/cancion_larga.jpg" class="img-fluid rounded w-100 object-fit-cover" style="max-height: 280px;" alt="Composición más larga">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso Curioso #3 -->
+                    <div class="bg-blog-gris p-4 rounded shadow-sm">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-uppercase mb-3">Rango Agudo Extremo</h3>
+                                    <p class="text-secondary mb-3">
+                                        Alcanzado por Georgia Brown. Logró cantar una nota <strong>G10 (25,086 Hz)</strong>, una frecuencia imperceptible para el oído humano común.
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-light border-2 custom-btn-case fw-bold text-uppercase mt-2" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#detalleCaso3" 
+                                            aria-expanded="false">
+                                        Ver Caso <i class="bi bi-caret-down-fill ms-1"></i>
+                                    </button>
+                                    <div class="collapse mt-3" id="detalleCaso3">
+                                        <div class="p-3 bg-dark rounded text-secondary small">
+                                            Su registro abarca 8 octavas y ostenta el récord Guinness del tono vocal más alto jamás registrado en un ser humano.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-3 mt-lg-4">
+                                <img src="img/nota_aguda.jpg" 
+                                     class="img-fluid rounded w-100 object-fit-cover" 
+                                     style="max-height: 280px; object-position: top;" 
+                                     alt="Nota más aguda">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso Curioso #4 -->
+                    <div class="bg-blog-gris p-4 rounded shadow-sm">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-uppercase mb-3">Frecuencia más grave</h3>
+                                    <p class="text-secondary mb-3">
+                                        Tim Storms ostenta el récord Guinness produciendo una nota de <strong>0.189 Hz (G-7)</strong>, audible prácticamente solo para paquidermos.
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-light border-2 custom-btn-case fw-bold text-uppercase mt-2" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#detalleCaso4" 
+                                            aria-expanded="false">
+                                        Ver Caso <i class="bi bi-caret-down-fill ms-1"></i>
+                                    </button>
+                                    <div class="collapse mt-3" id="detalleCaso4">
+                                        <div class="p-3 bg-dark rounded text-secondary small">
+                                            La nota es tan grave que ni siquiera el propio cantante puede escucharla mientras la emite; solo puede sentirse mediante vibraciones mecánicas.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/nota_grave.jpg" class="img-fluid rounded w-100 object-fit-cover" style="max-height: 280px;" alt="Nota más grave">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   
+
+    <!-- ========================================== -->
+    <!-- SCRIPTS DE JAVASCRIPT                      -->
+    <!-- ========================================== -->
+    
+    <!-- JS de Bootstrap (OBLIGATORIO para carrusel, offcanvas y collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
