@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicMania - Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Hojas de estilo externas CSS -->
     <link rel="stylesheet" href="css/estilos.css">
-    
 </head>
 <body>
 
-    <!-- Header y Menú de navegación  -->
+    <!-- Header y Menú de Navegación -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div class="container-fluid">
@@ -29,6 +30,9 @@
                             <a class="nav-link" href="catalogo_albumes.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="blog_resenas.html">Blog/Reseñas</a>
                         </li>
                         <li class="nav-item">
@@ -38,8 +42,6 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
-
-                    <!-- Acciones de usuario y carrito ubicadas en la parte superior derecha -->
                     <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3 ms-lg-auto">
                         <a class="nav-link" href="iniciar_sesion.html">Iniciar sesión</a>
                         <a class="nav-link" href="registro.html">Registrarse</a>
@@ -47,93 +49,115 @@
                     </div>
                 </div>
             </div>
+            
         </nav>
     </header>
 
     <!-- Contenido Principal -->
     <main>
 
-        <!-- Sección Banner Principal -->
-        <section class="py-5 bg-light text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">BIENVENIDOS A MUSICMANIA</h1>
-                <h2 class="h4 text-muted mb-4">TU TIENDA DE MÚSICA ONLINE</h2>
-                <p class="lead">Lanzamientos, novedades y ofertas exclusivas para tu colección.</p>
-                
-            </div>
-        </section>
+        <!-- Banner Principal (Hero con fondo musical) -->
+<section class="hero-musica text-center mb-5">
+    <div class="container py-4">
+        <h1 class="display-3 fw-bold text-uppercase tracking-wide">Bienvenidos a MusicMania</h1>
+        <h2 class="h3 text-warning mb-4 fw-light">Tu Tienda de Música Online</h2>
+        <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+            Encuentra vinilos exclusivos, CDs de colección y las mejores novedades para apasionados del sonido análogo.
+        </p>
+        <!-- El botón ahora funciona como un hipervínculo directo al catálogo -->
+        <a href="catalogo_albumes.html" class="btn btn-hero btn-lg fw-bold px-4 py-3 shadow">
+            Ver Catálogo Completo
+        </a>
+    </div>
+</section>
 
-        <!-- Sección de Destacados  -->
-        <section class="py-5">
-            <div class="container">
-                <h3 class="text-center mb-4 fs-2">Lo Más Buscado</h3>
-                
-                <div class="row g-4 justify-content-center">
-                    
-                    <!-- Tarjeta 1: Catálogo -->
-                    <article class="col-md-5">
-                        <div class="card tarjeta shadow-sm">
-                            <img src="img/albumes_RapChileno.jpg" class="card-img-top img-efecto" alt="Colección de Vinilos">
-                            <div class="card-body text-center">
-                                <h4 class="card-title fw-bold">CATÁLOGO DE ÁLBUMES</h4>
-                                <p class="card-text">Explora nuestra colección completa de vinilos, CDs y más.</p>
-                                <a href="catalogo_albumes.html" class="btn btn-outline-danger">Ver Catálogo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta 2: Reseñas -->
-                    <article class="col-md-5">
-                        <div class="card tarjeta shadow-sm">
-                            <img src="img/blog.jpg" class="card-img-top img-efecto" alt="Reseñas de Música">
-                            <div class="card-body text-center">
-                                <h4 class="card-title fw-bold">BLOG Y RESEÑAS</h4>
-                                <p class="card-text">Lee opiniones, análisis de discos clásicos y novedades.</p>
-                                <a href="blog_resenas.html" class="btn btn-outline-danger">Leer Blog</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-         
-            
-
-<!-- Sección Informativa sobre Nosotros -->
-<section class="py-4 bg-light">
+        <!-- Sección Productos y Accesos Destacados -->
+<section class="py-5">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
-            
-            <div class="col-md-3 text-center">
-                <img src="img/logo.jpg" class="img-fluid rounded img-logo shadow-sm mb-3 mb-md-0" alt="Logo MusicMania">
-            </div>
+        <h3 class="text-center mb-2 fs-2 fw-bold">Explora MusicMania</h3>
+        <p class="text-center text-muted mb-5">Encuentra todo lo que necesitas para elevar tu experiencia musical</p>
 
-            <div class="col-md-7 text-center text-md-start">
-                <h3>¿Quiénes Somos?</h3>
-                <p>Somos un proyecto apasionado por la música física. Conoce más sobre nuestra historia y equipo.</p>
-                <a href="sobre_nosotros.html" class="btn btn-dark">Conócenos</a>
-            </div>
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Tarjeta 1: Vinilos -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Vinilos destacados">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Vinilos & LPs Exclusivos</h4>
+                        <p class="card-text text-muted small flex-grow-1">Ediciones limitadas, clásicos del rock, jazz y los últimos lanzamientos en formato análogo.</p>
+                        <a href="catalogo_albumes.html" class="btn btn-danger w-100 mt-3 fw-bold">Ver Álbumes</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2: Tornamesas/Equipos -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Tornamesas y audio">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Tornamesas & Audio</h4>
+                        <p class="card-text text-muted small flex-grow-1">Equipos de alta fidelidad, agujas de repuesto y amplificadores para tu sistema de sonido.</p>
+                        <a href="equipos.html" class="btn btn-outline-danger w-100 mt-3 fw-bold">Ver Equipos</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3: Blog y Noticias -->
+            <article class="col-md-4">
+                <div class="card h-100 tarjeta shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80" class="card-img-top img-efecto" alt="Reseñas musicales">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h4 class="card-title fw-bold fs-5">Reseñas & Comunidad</h4>
+                        <p class="card-text text-muted small flex-grow-1">Lee las opiniones de nuestros expertos sobre los álbumes más icónicos de la historia.</p>
+                        <a href="blog_resenas.html" class="btn btn-outline-dark w-100 mt-3 fw-bold">Leer Blog</a>
+                    </div>
+                </div>
+            </article>
 
         </div>
     </div>
 </section>
 
+        <!-- Video Embebido (Exigencia del encargo) -->
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h3 class="fw-bold mb-3">La Experiencia del Vinilo</h3>
+                <p class="text-muted mb-4">Descubre la magia del sonido análogo en nuestra tienda.</p>
+                <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ppotU2wuSeJmzcAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-3 text-center">
+                        <img src="img/logo.jpg" class="img-fluid rounded img-logo shadow-sm mb-3 mb-md-0" alt="Logo MusicMania">
+                    </div>
+                    <div class="col-md-7 text-center text-md-start">
+                        <h3>¿Quiénes Somos?</h3>
+                        <p>Somos un proyecto apasionado por la música física. Conoce más sobre nuestra historia y equipo.</p>
+                        <a href="sobre_nosotros.html" class="btn btn-dark">Conócenos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer (Requisito 5) -->
+    <!-- Footer Informativo -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
             <p class="mb-1">&copy; 2026 MusicMania - Todos los derechos reservados.</p>
-            <p class="small text-muted mb-0">Página hecha por estudiantes.</p>
+            <p class="small text-muted mb-0">Página hecha por estudiantes DSY1104.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/bootstrap.bundle.min.js"></script>
-    <!-- Archivo JS personalizado (Requisito 6) -->
+    <!-- Scripts externos -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/carrito.js"></script>
-    <script src="js/carrito_vista.js"></script>
 </body>
 </html>
