@@ -1,12 +1,10 @@
-/* =======================================================
-   ESTILOS GENERALES
-======================================================= */
 .img-logo {
     width: 150px;
     height: auto;
     border-radius: 50% !important;
 }
 
+/* Dimensiones estables para las miniaturas y controles del carrito */
 .cart-product-image {
     width: 112px;
     height: 84px;
@@ -28,10 +26,7 @@
     border-radius: 50%;
     background: #e9ecef;
     font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    line-height: 18px;
 }
 
 .quantity-control input {
@@ -39,18 +34,6 @@
     height: 28px;
     text-align: center;
     border: 1px solid #adb5bd;
-    border-radius: 4px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-    margin: 0;
-}
-
-.quantity-control input::-webkit-outer-spin-button,
-.quantity-control input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
 }
 
 @media (max-width: 575.98px) {
@@ -58,7 +41,6 @@
         width: 78px;
         height: 68px;
     }
-
     .cart-product-image + .flex-grow-1 + strong {
         display: none;
     }
@@ -66,110 +48,7 @@
     .quantity-control {
         flex-shrink: 0;
     }
-}
-
-/* =======================================================
-   SISTEMA DE CALIFICACIÓN DE ESTRELLAS
-======================================================= */
-/* Contenedor principal */
-.google-rating-container .google-stars {
-    user-select: none;
-}
-
-/* Estado normal de las estrellas (QUITAR !important del color base) */
-.google-rating-container .star-btn {
-    cursor: pointer;
-    font-size: 1.8rem;
-    line-height: 1;
-    color: #ccc; /* Sin !important para permitir sobreescritura */
-    transition: transform 0.15s ease, color 0.15s ease;
-    display: inline-block;
-    padding: 0 2px;
-}
-
-/* Ampliación al pasar el ratón */
-.google-rating-container .star-btn:hover {
-    transform: scale(1.25);
-}
-
-/* Estado activo (amarillo) - Forzado con especificidad alta */
-.google-rating-container .google-stars .star-btn.active {
-    color: #fbc02d !important; /* Amarillo Google Maps */
-}
-/* =======================================================
-   Estilo del Blog
-======================================================= */
-/* Color gris oscuro exacto para la sección entera */
-.bg-blog-gris {
-  background-color: #1a1a1e !important;
-}
-
-/* Imagen destacada grande */
-.main-blog-img {
-  height: 320px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.main-blog-img:hover {
-  transform: scale(1.01);
-}
-
-/* Miniaturas inferiores con comportamiento interactivo */
-.blog-thumb {
-  height: 80px;
-  object-fit: cover;
-  cursor: pointer;
-  opacity: 0.5;
-  border: 2px solid transparent;
-  background-color: #2a2a2e;
-  transition: all 0.3s ease;
-}
-
-.blog-thumb:hover, 
-.blog-thumb.active {
-  opacity: 1;
-  border-color: #dc3545 !important; /* Rojo dinámico coincidente con la paleta de MusicMania */
-  transform: translateY(-2px);
-}
-
-/* Espaciado del tracking de la etiqueta superior */
-.tracking-wider {
-  letter-spacing: 2px;
-}
-
-/* Ajuste del listado para que encaje suavemente en el fondo oscuro */
-.blog-item {
-  transition: background-color 0.2s ease, padding-left 0.2s ease;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-radius: 6px;
-}
-
-.blog-item:hover {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-/* Estilo del botón al estilo alambre/wireframe*/
-.custom-btn-case {
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #000000 !important;
-  box-shadow: 3px 3px 0px #000000;
-  padding: 8px 20px;
-  transition: all 0.2s ease;
-}
-
-.custom-btn-case:hover {
-  background-color: #e2e2e2;
-  color: #000000;
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px #000000;
-}
-
-
-
-/* agregandole estilo al inicio */
+    /* agregandole estilo al inicio */
 
 
 /* Banner Principal Hero con fondo musical */
@@ -192,4 +71,5 @@
     background-color: #e0a800;
     transform: scale(1.05);
     color: #000;
+}
 }
