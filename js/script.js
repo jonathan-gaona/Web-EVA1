@@ -7,7 +7,6 @@ function enviarContacto(event) {
     const emailInput = document.getElementById("email").value.trim().toLowerCase();
     const alertaExito = document.getElementById("mensajeExito");
     const alertaError = document.getElementById("mensajeError");
-
     // Expresión regular que permite únicamente correos terminados en @gmail.com o @hotmail.com
     const regexCorreoPermitido = /^[a-zA-Z0-9._%+-]+@(gmail|hotmail)\.com$/;
 
