@@ -13,22 +13,27 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold text-danger fs-3" href="index.html">MusicMania</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mostrar navegación">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="catalogo_albumes.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog_resenas.html">Blog/Reseñas</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="resena.html">Reseñas</a></li>
                         <li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
-                    <!-- Acciones de usuario y carrito ubicadas en la parte superior derecha -->
                     <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3 ms-lg-auto">
                         <a class="nav-link" href="iniciar_sesion.html">Iniciar sesión</a>
                         <a class="nav-link" href="registro.html">Registrarse</a>
-                        <a class="btn btn-dark btn-sm" href="carrito_compras.html">Carrito (3)</a>
+                        <a class="btn btn-dark btn-sm" href="carrito_compras.html" id="btn-carrito">Carrito (0)</a>
                     </div>
                 </div>
             </div>
