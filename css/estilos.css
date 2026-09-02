@@ -73,3 +73,11 @@
     color: #000;
 }
 }
+
+
+.card-img-top {
+    height: 250px;           /* Define una altura fija para todas */
+    object-fit: cover;       /* Recorta la imagen proporcionalmente sin deformar */
+    object-position: center;  /* Centra el enfoque de la foto */
+    width: 100%;             /* Asegura que ocupe todo el ancho de la tarjeta */
+}
