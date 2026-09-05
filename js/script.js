@@ -8,7 +8,7 @@ function enviarContacto(event) {
     const alertaExito = document.getElementById("mensajeExito");
     const alertaError = document.getElementById("mensajeError");
     // Expresión regular que permite únicamente correos terminados en @gmail.com o @hotmail.com
-    const regexCorreoPermitido = /^[a-zA-Z0-9._%+-]+@(gmail|hotmail)\.com$/;
+    const regexCorreoPermitido = /^[\w-\.]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
 
     // Ocultar alertas anteriores antes de validar
     alertaExito.classList.add("d-none");
@@ -17,7 +17,7 @@ function enviarContacto(event) {
     // Validar el correo ingresado
     if (!regexCorreoPermitido.test(emailInput)) {
         // Mostrar alerta roja de error si el dominio no es gmail ni hotmail
-        alertaError.textContent = "Error: El correo debe ser un dominio permitido (@gmail.com o @hotmail.com).";
+        alertaError.textContent = "Error: El correo debe ser un dominio permitido (@gmail.com, @duoc.cl, @profesor.duoc.cl).";
         alertaError.classList.remove("d-none");
         return; // Cortar ejecución
     }
